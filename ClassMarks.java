@@ -37,22 +37,25 @@ final class ClassMarks {
   */
 
   public static int studentAvg(final int[][] markList) {
+
     // Creates the varaible to add all the marks together
     int addVal = 0;
+
     // Creates loop for all the dimensions of the array
     for (int counter = 0; counter < markList.length; counter++) {
       // Creates loop for all the elements in the aray
       for (int counterTwo = 0; counterTwo < markList[counter].length;
         counterTwo++) {
+
         // Adds the marks together
         addVal += (markList[counter][counterTwo]);
       }
     }
     // Creates the total amount of marks
     int divVal = STUDENTS * MARKS;
-
     // finds average of all numbers in array
     int markAvg = addVal / divVal;
+
     // Returns the average
     return markAvg;
   }
@@ -70,18 +73,22 @@ final class ClassMarks {
 
     // Creates loop for all the dimensions of the array
     for (int counter = 0; counter < markList.length; counter++) {
+
       // Prints out which student it is
       System.out.println();
       System.out.println("student: " + (counter + 1));
+
       // Creates loop for all the elements inside the array
       for (int counterTwo = 0; counterTwo < markList[counter].length;
         counterTwo++) {
+
         // Creates random numbers and stores it in the array
         markList[counter][counterTwo] = (int) (Math.random() * RANDPARAM + 1);
         //prints random numbers placed into array
         System.out.println(markList[counter][counterTwo]);
       }
     }
+
     // Calls the student average function and reveives the average
     int finalMarkAvg = studentAvg(markList);
     // prints average of all marks
